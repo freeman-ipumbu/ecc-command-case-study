@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ECC Command for E.M.A. Namibia</title>
+  <desc id="desc">A deep blue emergency command interface with yellow and cyan typography, radar rings, unit status cards and the SolarSpin Technologies credit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#02090e"/><stop offset=".52" stop-color="#092330"/><stop offset="1" stop-color="#031118"/></linearGradient>
+    <radialGradient id="glow" cx="42%" cy="44%" r="58%"><stop stop-color="#20c7ec" stop-opacity=".26"/><stop offset="1" stop-color="#20c7ec" stop-opacity="0"/></radialGradient>
+    <linearGradient id="type" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffe057"/><stop offset=".52" stop-color="#fff3a4"/><stop offset="1" stop-color="#20c7ec"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#143848" stop-opacity=".9"/><stop offset="1" stop-color="#06151d" stop-opacity=".94"/></linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#afd8e1" stroke-opacity=".035"/></pattern>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#000" flood-opacity=".4"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1060" cy="410" r="290" fill="none" stroke="#20c7ec" stroke-opacity=".09"/>
+  <circle cx="1060" cy="410" r="210" fill="none" stroke="#20c7ec" stroke-opacity=".13"/>
+  <circle cx="1060" cy="410" r="128" fill="none" stroke="#20c7ec" stroke-opacity=".18"/>
+  <path d="M1060 90V730M740 410h640" stroke="#20c7ec" stroke-opacity=".08"/>
+  <g transform="translate(82 66)">
+    <circle cx="34" cy="34" r="32" fill="#0b2734" stroke="#ffe057" stroke-width="4"/>
+    <path d="m34 10 7 16 17 1-13 11 4 17-15-9-15 9 4-17-13-11 17-1Z" fill="#20c7ec"/>
+    <path d="M18 34h10l4-9 6 20 4-11h9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="85" y="29" fill="#eef7f8" font-family="Arial, sans-serif" font-size="23" font-weight="900" letter-spacing="4">ECC COMMAND</text>
+    <text x="85" y="51" fill="#78939c" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3">E.M.A. NAMIBIA · 2026</text>
+  </g>
+  <g transform="translate(82 256)">
+    <text fill="#20c7ec" font-family="Arial, sans-serif" font-size="14" font-weight="900" letter-spacing="4">EMERGENCY CONTROL · SYNTHETIC PILOT</text>
+    <text y="96" fill="#eef7f8" font-family="Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-6">Every second.</text>
+    <text y="184" fill="url(#type)" font-family="Georgia, serif" font-size="100" font-style="italic" letter-spacing="-5">Every handover.</text>
+    <text y="276" fill="#eef7f8" font-family="Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-6">Accounted for.</text>
+    <text y="336" fill="#91aab2" font-family="Arial, sans-serif" font-size="24">One operational picture for calls, crews, acknowledgements and handovers.</text>
+  </g>
+  <g transform="translate(970 276)" filter="url(#shadow)">
+    <rect width="500" height="344" rx="30" fill="url(#glass)" stroke="#afd8e1" stroke-opacity=".18"/>
+    <text x="30" y="42" fill="#6f8d96" font-family="Arial, sans-serif" font-size="11" font-weight="900" letter-spacing="2">LIVE COORDINATION</text>
+    <text x="30" y="74" fill="#eef7f8" font-family="Arial, sans-serif" font-size="28" font-weight="800">Control queue</text>
+    <g transform="translate(30 105)">
+      <rect width="440" height="62" rx="14" fill="#0a202b" stroke="#afd8e1" stroke-opacity=".12"/>
+      <rect x="14" y="11" width="48" height="40" rx="10" fill="#ff4e5b" fill-opacity=".18" stroke="#ff4e5b" stroke-opacity=".5"/>
+      <text x="28" y="37" fill="#ff7b84" font-family="Arial" font-size="16" font-weight="900">P1</text>
+      <text x="78" y="25" fill="#718d96" font-family="Arial" font-size="9" font-weight="800" letter-spacing="1">ECC-2026-0042</text>
+      <text x="78" y="45" fill="#eef7f8" font-family="Arial" font-size="15" font-weight="800">Medical · Unit responding</text>
+      <circle cx="417" cy="31" r="5" fill="#56e49c"/>
+    </g>
+    <g transform="translate(30 179)">
+      <rect width="440" height="62" rx="14" fill="#0a202b" stroke="#afd8e1" stroke-opacity=".12"/>
+      <rect x="14" y="11" width="48" height="40" rx="10" fill="#ffab4c" fill-opacity=".16" stroke="#ffab4c" stroke-opacity=".45"/>
+      <text x="28" y="37" fill="#ffbd72" font-family="Arial" font-size="16" font-weight="900">P2</text>
+      <text x="78" y="25" fill="#718d96" font-family="Arial" font-size="9" font-weight="800" letter-spacing="1">ECC-2026-0041</text>
+      <text x="78" y="45" fill="#eef7f8" font-family="Arial" font-size="15" font-weight="800">MVA · On scene</text>
+      <circle cx="417" cy="31" r="5" fill="#20c7ec"/>
+    </g>
+    <g transform="translate(30 253)">
+      <rect width="138" height="58" rx="13" fill="#102d3a" stroke="#20c7ec" stroke-opacity=".22"/>
+      <text x="15" y="22" fill="#718d96" font-family="Arial" font-size="8" font-weight="800" letter-spacing="1">AVAILABLE</text>
+      <text x="15" y="45" fill="#56e49c" font-family="Arial" font-size="23" font-weight="900">3 UNITS</text>
+      <rect x="151" width="138" height="58" rx="13" fill="#102d3a" stroke="#20c7ec" stroke-opacity=".22"/>
+      <text x="166" y="22" fill="#718d96" font-family="Arial" font-size="8" font-weight="800" letter-spacing="1">ACKNOWLEDGED</text>
+      <text x="166" y="45" fill="#20c7ec" font-family="Arial" font-size="23" font-weight="900">82%</text>
+      <rect x="302" width="138" height="58" rx="13" fill="#ffe057" fill-opacity=".12" stroke="#ffe057" stroke-opacity=".3"/>
+      <text x="317" y="22" fill="#b9a747" font-family="Arial" font-size="8" font-weight="800" letter-spacing="1">EMERGENCY</text>
+      <text x="317" y="45" fill="#ffe057" font-family="Arial" font-size="23" font-weight="900">9112</text>
+    </g>
+  </g>
+  <g transform="translate(82 805)">
+    <rect width="360" height="42" rx="12" fill="#ffe057" fill-opacity=".08" stroke="#ffe057" stroke-opacity=".22"/>
+    <circle cx="22" cy="21" r="5" fill="#ffe057"/>
+    <text x="38" y="18" fill="#ffe057" font-family="Arial" font-size="9" font-weight="900" letter-spacing="2">SYNTHETIC TRAINING ONLY</text>
+    <text x="38" y="31" fill="#728d96" font-family="Arial" font-size="8">No live dispatch · no patient data · no external alerts</text>
+  </g>
+  <text x="1518" y="835" text-anchor="end" fill="#78939c" font-family="Arial" font-size="10">An experience by</text>
+  <text x="1518" y="854" text-anchor="end" fill="#eef7f8" font-family="Arial" font-size="15" font-weight="900">SolarSpin Technologies</text>
+</svg>
