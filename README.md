@@ -16,8 +16,10 @@ The pilot turns that fragmented operating picture into one coherent system:
 
 - a dispatcher command centre
 - a guided, workbook-aligned intake
+- a source-labelled open operational map for Windhoek and Walvis Bay
 - **ECC Signal**, an E.M.A.-owned alarm and acknowledgement engine with no paid provider on the critical path
 - a responder PWA with alarm acknowledgement and status controls
+- a five-step first-run tour and printable field guide
 - a public companion experience for 9112, location preparation and community information
 - an integration boundary that keeps E.M.A. in control of its own record
 
@@ -45,11 +47,19 @@ The architecture favours an installable web app, low-bandwidth operation, open a
 |---|---|
 | Live command board | Shared view of incidents, priority, ownership, units, acknowledgements and freshness |
 | Guided intake | Converts the supplied ECC workbook into a four-stage, conditional question flow |
+| Open operational map | MapLibre rendering, OpenFreeMap tiles and OpenStreetMap data with visible freshness, stale-GPS and unavailable states |
 | ECC Signal | Searches 139 inherited quick-action references, confirms priority and target, models substitute chains and previews routes without contacting responders |
 | Unit board | Radio callsigns, statuses 0–9, assignments, availability and GPS truth states |
 | Responder PWA | Alarm accept/unavailable response, quick status changes and radio phrase assistance |
 | Audit & handover | Actor, timestamp, correlation trail, destination truth and integration readiness |
+| Guided onboarding | Persistent help, five task-focused chapters and a printable operator field guide |
 | Community PWA | Deliberate 9112 calling, location preparation, traffic reports, WhatsApp and magazine links |
+
+## Location without theatre
+
+The map is intentionally honest. It uses a real, open basemap and shows source attribution in the interface, but every pilot unit and incident position is clearly classified as synthetic training data. Fresh, stale and unavailable states stay visible; the system never turns a general location into false GPS precision.
+
+Map rendering is self-hosted with MapLibre GL JS. The pilot basemap uses OpenFreeMap and OpenStreetMap data, while the unit board and incident queue remain usable if the public tile service is unavailable. An approved Teltech feed can later replace the synthetic position adapter without replacing the command interface.
 
 ## ECC Signal: E.M.A. owns the alarm path
 
@@ -91,6 +101,8 @@ flowchart LR
     B --> D[(Cloudflare D1\nsynthetic pilot store)]
     B --> U[Append-oriented audit trail]
     B --> S[ECC Signal\nnative alarm + response]
+    B --> M[Open map adapter\nsynthetic position truth]
+    M --> O[OpenFreeMap / OpenStreetMap]
     S --> R
     B -. optional migration only .-> G[Legacy provider adapter]
     B -. protocol gate .-> T[Teltech / GPS adapter]
@@ -126,6 +138,8 @@ The visual system borrows from the physical world of emergency control without b
 - persistent synthetic case, alarm, acknowledgement and unit status after refresh
 - explicit protected-flow QA for Status 0
 - exact 139-of-139 ECC Signal inventory checks with unique code assertions
+- live-basemap, source-attribution, marker and fallback checks in authenticated production QA
+- five-step help overlay and printable field-guide checks
 - no-send and P4-block route tests
 - workbook PII exclusion checks
 
