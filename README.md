@@ -16,9 +16,12 @@ The pilot turns that fragmented operating picture into one coherent system:
 
 - a dispatcher command centre
 - a guided, workbook-aligned intake
+- an integrated emergency-centre view for medical, fire-and-rescue, police and specialist resources
+- coordinated multi-resource assignment, so several ambulances and partner services can share one accountable scene
 - a source-labelled open operational map for Windhoek and Walvis Bay
 - **ECC Signal**, an E.M.A.-owned alarm and acknowledgement engine with no paid provider on the critical path
 - a responder PWA with alarm acknowledgement and status controls
+- shift-aware day and night themes calibrated for bright and low-light control rooms
 - a five-step first-run tour and printable field guide
 - a public companion experience for 9112, location preparation and community information
 - an integration boundary that keeps E.M.A. in control of its own record
@@ -33,9 +36,9 @@ The interface can surface missing answers, explicit danger signals and plausible
 
 Unknown hospital capacity stays **unknown**. Stale GPS stays **stale**. Unacknowledged alarms stay visible. A suggestion is never disguised as a fact.
 
-### One case, one owner, one trail
+### One case, one owner, every required resource
 
-Cases show an accountable owner. Protected actions create timestamped server-side audit events. Status 0—medic distress—is deliberate, conspicuous and designed for an approved escalation path.
+Cases show an accountable owner while each medical, fire, police or specialist resource keeps its own assignment and acknowledgement state. Protected actions create timestamped server-side audit events. Status 0—medic distress—is deliberate, conspicuous and designed for an approved escalation path.
 
 ### Built for nonprofit reality
 
@@ -45,10 +48,10 @@ The architecture favours an installable web app, low-bandwidth operation, open a
 
 | Surface | What it solves |
 |---|---|
-| Live command board | Shared view of incidents, priority, ownership, units, acknowledgements and freshness |
+| Live command board | Shared multi-agency view of incidents, priority, ownership, resources, acknowledgements and freshness |
 | Guided intake | Converts the supplied ECC workbook into a four-stage, conditional question flow |
 | Open operational map | MapLibre rendering, OpenFreeMap tiles and OpenStreetMap data with visible freshness, stale-GPS and unavailable states |
-| ECC Signal | Searches 139 inherited quick-action references, confirms priority and target, models substitute chains and previews routes without contacting responders |
+| ECC Signal | Organises 139 inherited quick-action references into navigable families, confirms priority and multiple targets, models substitute chains and previews routes without contacting responders |
 | Unit board | Radio callsigns, statuses 0–9, assignments, availability and GPS truth states |
 | Responder PWA | Alarm accept/unavailable response, quick status changes and radio phrase assistance |
 | Audit & handover | Actor, timestamp, correlation trail, destination truth and integration readiness |
@@ -69,7 +72,7 @@ ECC Signal adds the workflow E.M.A. needs around that codebook:
 
 - E.M.A.-owned alarm, response and audit records
 - best-effort, strict, escalation and full-escalation route modes
-- primary resources and approved substitute chains
+- multiple primary resources and approved substitute chains for one scene
 - accept, decline and emergency responder outcomes
 - a no-send route lab that never contacts a device or external provider
 - an explicit P4 block until E.M.A. approves the severity mapping
@@ -128,7 +131,7 @@ This is an evaluation environment, not a live dispatch system. Real-world use re
 
 ## Design direction
 
-The visual system borrows from the physical world of emergency control without becoming a generic red-and-blue dashboard: luminous yellow for deliberate action, cyan for live systems, deep mineral blues for calm focus, beacon rings for urgency and generous typography for instant hierarchy. Motion communicates change; it is never required to understand the screen, and reduced-motion preferences are respected.
+The visual system borrows from the physical world of emergency control without becoming a generic red-and-blue dashboard: luminous yellow for deliberate action, cyan for live systems, restrained service-family colours, beacon rings for urgency and generous typography for instant hierarchy. A warm, high-contrast day mode and low-glare charcoal night mode carry the same operational hierarchy, while the map follows the active shift theme. Red remains reserved for genuinely critical states. Motion communicates change; it is never required to understand the screen, and reduced-motion preferences are respected.
 
 ## Pilot quality bar
 
@@ -138,6 +141,8 @@ The visual system borrows from the physical world of emergency control without b
 - persistent synthetic case, alarm, acknowledgement and unit status after refresh
 - explicit protected-flow QA for Status 0
 - exact 139-of-139 ECC Signal inventory checks with unique code assertions
+- multi-resource dispatch checks spanning medical, fire-and-rescue and police assignments on one incident
+- day/night rendering and theme-aware map checks
 - live-basemap, source-attribution, marker and fallback checks in authenticated production QA
 - five-step help overlay and printable field-guide checks
 - no-send and P4-block route tests
