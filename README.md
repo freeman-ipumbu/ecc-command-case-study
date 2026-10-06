@@ -15,11 +15,11 @@ E.M.A. needed more than another website. Its emergency control workflow spans ca
 The pilot turns that fragmented operating picture into one coherent system:
 
 - a dispatcher command centre
-- a guided, workbook-aligned intake
+- a guided, workbook-aligned intake with visible follow-up windows for significant answers
 - an integrated emergency-centre view for medical, fire-and-rescue, police and specialist resources
 - coordinated multi-resource assignment, so several ambulances and partner services can share one accountable scene
 - a source-labelled open operational map for Windhoek and Walvis Bay
-- **ECC Signal**, an E.M.A.-owned alarm and acknowledgement engine with no paid provider on the critical path
+- **ECC Signal**, an E.M.A.-owned alarm and acknowledgement engine with transparent questionnaire-based code suggestions and no paid provider on the critical path
 - a responder PWA with alarm acknowledgement and status controls
 - shift-aware day and night themes calibrated for bright and low-light control rooms
 - a five-step first-run tour and printable field guide
@@ -30,7 +30,7 @@ The pilot turns that fragmented operating picture into one coherent system:
 
 ### Human command, computational support
 
-The interface can surface missing answers, explicit danger signals and plausible locations. A human dispatcher still confirms the location, priority, alarm text and assignment. The pilot does not diagnose, autonomously dispatch, silently downgrade or refuse help.
+The interface can surface missing answers, open a conspicuous follow-up window for significant answers, propose explained dispatch-code matches and suggest plausible locations. A human dispatcher still confirms the location, ECC code, priority, alarm text and every assignment. The pilot does not diagnose, autonomously dispatch, silently downgrade or refuse help.
 
 ### Uncertainty is visible
 
@@ -49,9 +49,9 @@ The architecture favours an installable web app, low-bandwidth operation, open a
 | Surface | What it solves |
 |---|---|
 | Live command board | Shared multi-agency view of incidents, priority, ownership, resources, acknowledgements and freshness |
-| Guided intake | Converts the supplied ECC workbook into a four-stage, conditional question flow |
+| Guided intake | Converts the supplied ECC workbook into a four-stage, conditional question flow with visible follow-up capture for significant caller-observed answers |
 | Open operational map | MapLibre rendering, OpenFreeMap tiles and OpenStreetMap data with visible freshness, stale-GPS and unavailable states |
-| ECC Signal | Organises 139 inherited quick-action references into navigable families, confirms priority and multiple targets, models substitute chains and previews routes without contacting responders |
+| ECC Signal | Organises 139 inherited quick-action references into navigable families, explains up to three intake matches, requires human code confirmation, coordinates multiple targets, models substitute chains and previews routes without contacting responders |
 | Unit board | Radio callsigns, statuses 0–9, assignments, availability and GPS truth states |
 | Responder PWA | Alarm accept/unavailable response, quick status changes and radio phrase assistance |
 | Audit & handover | Actor, timestamp, correlation trail, destination truth and integration readiness |
@@ -71,6 +71,8 @@ The legacy dashboard was used as read-only requirements evidence—not as a depe
 ECC Signal adds the workflow E.M.A. needs around that codebook:
 
 - E.M.A.-owned alarm, response and audit records
+- transparent questionnaire-based code matches with the dispatcher retaining the final decision
+- the confirmed code carried into the alarm text, case timeline and audit evidence
 - best-effort, strict, escalation and full-escalation route modes
 - multiple primary resources and approved substitute chains for one scene
 - accept, decline and emergency responder outcomes
@@ -131,7 +133,7 @@ This is an evaluation environment, not a live dispatch system. Real-world use re
 
 ## Design direction
 
-The visual system borrows from the physical world of emergency control without becoming a generic red-and-blue dashboard: luminous yellow for deliberate action, cyan for live systems, restrained service-family colours, beacon rings for urgency and generous typography for instant hierarchy. A warm, high-contrast day mode and low-glare charcoal night mode carry the same operational hierarchy, while the map follows the active shift theme. Red remains reserved for genuinely critical states. Motion communicates change; it is never required to understand the screen, and reduced-motion preferences are respected.
+The visual system borrows from the physical world of emergency control without becoming a generic red-and-blue dashboard: luminous yellow for deliberate action, cyan for live systems, restrained service-family colours, beacon rings for urgency and generous typography for instant hierarchy. A warm, high-contrast day mode and low-glare charcoal night mode carry the same operational hierarchy, while the map follows the active shift theme. Critical states use labelled red; a deliberately distinct rose-red edge plus an explicit `SELECTED` badge makes chosen response resources unmistakable without relying on colour alone. Motion communicates change; it is never required to understand the screen, and reduced-motion preferences are respected.
 
 ## Pilot quality bar
 
@@ -142,6 +144,8 @@ The visual system borrows from the physical world of emergency control without b
 - explicit protected-flow QA for Status 0
 - exact 139-of-139 ECC Signal inventory checks with unique code assertions
 - multi-resource dispatch checks spanning medical, fire-and-rescue and police assignments on one incident
+- questionnaire follow-up, suggested-code explanation, mandatory human code confirmation and alarm-code persistence checks
+- selected-resource contrast checks in day and night themes
 - day/night rendering and theme-aware map checks
 - live-basemap, source-attribution, marker and fallback checks in authenticated production QA
 - five-step help overlay and printable field-guide checks
