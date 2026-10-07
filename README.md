@@ -4,7 +4,7 @@
 
 An emergency coordination concept for E.M.A. Namibia—designed around the people already doing the work, the language they already use, and the operational truth they need in the next second.
 
-[Open the protected pilot](https://ecc-command.pages.dev/) · [E.M.A. Namibia](https://ema-namibia.pages.dev/) · [SolarSpin Technologies](https://freeman-ipumbu.pages.dev/)
+[Open the protected pilot](https://ecc-command.pages.dev/) · [E.M.A. Namibia](https://ema-namibia.pages.dev/) · [SolarSpin Technologies](https://solarspin-namibia.pages.dev/)
 
 > The public repository is a sanitised product case study. The production source, credentials, operational configuration and supplied documents remain private.
 
@@ -154,6 +154,6 @@ The visual system borrows from the physical world of emergency control without b
 
 ## Credits
 
-Concept, product design, engineering and pilot delivery by [SolarSpin Technologies](https://freeman-ipumbu.pages.dev/), in collaboration with E.M.A. Namibia.
+Concept, product design, engineering and pilot delivery by [SolarSpin Technologies](https://solarspin-namibia.pages.dev/), in collaboration with E.M.A. Namibia.
 
 Built with deep respect for the dispatchers, responders, volunteers, sponsors and community members who make emergency care possible.
